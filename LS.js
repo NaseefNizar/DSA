@@ -66,7 +66,6 @@ class LinkedList {
         }else{
             node.next = this.head
             this.head = node
-            // console.log(this.head);   
         }
         this.size++
     }
@@ -131,7 +130,6 @@ class LinkedList {
             }
             removenode=prev.next;
             prev.next=removenode.next
-
         }
           this.size--
           return console.log( removenode.value)
