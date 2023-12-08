@@ -1,3 +1,5 @@
+const a = [1, -5, 6, 0, -1, 55, -555];
+ 
 for(let i=0;i<a.length-1;i++){
     let min = i
     for(let j=i+1;j<a.length;j++){
@@ -13,4 +15,11 @@ for(let i=0;i<a.length-1;i++){
         a[min] = temp
     }
 }
+
+
 console.log(a); 
+
+
+// best-case - O(n^2)
+// average-case - O(n^2)
+// worst-case - O(n^2)
