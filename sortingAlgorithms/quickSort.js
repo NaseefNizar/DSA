@@ -64,3 +64,7 @@ function partition(arr,left, right) {
 // const arr = [1,-5,6,0,-1,55,-555]
 
 console.log(quickSort([1,.5,2,3,5,8,9,7]));
+
+
+// averageCase - O(nlogn)
+// worstCase - O(n^2)

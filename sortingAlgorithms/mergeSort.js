@@ -1,4 +1,3 @@
-//mergesort
 // Big-O = O(nlogn)
 
 function mergeSort(arr){
@@ -23,7 +22,9 @@ function mergeSort(arr){
     }
     let a=[5,15,25]
     let b=[30,20,10]
-    // console.log( merge(a,b))
-    // let arr=a.concat(b)
+            
 
 console.log(merge(a,mergeSort(b)));
+
+
+//space complexity - theta(n)
