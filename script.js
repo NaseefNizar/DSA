@@ -776,3 +776,7 @@
 // }
 // num = (a.length*(a.length+1))/2 - s
 // console.log(num);
+
+
+
+

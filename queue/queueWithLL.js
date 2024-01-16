@@ -1,4 +1,4 @@
-const LinkedList = require("./LSwithTail")
+const LinkedList = require("../linkedList/LSwithTail")
 
 class LinkedListQueue {
     constructor(){

@@ -145,21 +145,22 @@ class MinHeap {
 
 const heap = new MinHeap()
 
-// heap.add(5)
-// heap.add(10)
-// heap.add(15)
-// heap.add(2)
-// heap.add(45)
-// heap.add(17)
-// heap.add(6)
+heap.add(5)
+heap.add(10)
+heap.add(15)
+heap.add(2)
+heap.add(45)
+heap.add(17)
+heap.add(6)
 // console.log(heap.delete(2));
-// heap.add(1)
+heap.add(1)
+heap.add(0)
 
-// heap.print()
+heap.print()
 
-const numbers =[3,5,2,1,4]
-for(let i=0;i<numbers.length;i++){
-    heap.add(numbers[i])
-}
-const sortedNumbers = heap.heapSort()
-console.log(sortedNumbers);
+// const numbers =[3,5,2,1,4]
+// for(let i=0;i<numbers.length;i++){
+//     heap.add(numbers[i])
+// }
+// const sortedNumbers = heap.heapSort()
+// console.log(sortedNumbers);

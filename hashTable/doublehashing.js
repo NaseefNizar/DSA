@@ -31,7 +31,7 @@ class Hashtable{
         return this.table[index1]
     }
     display(){
-        for(let i=0;i<this.table.length;i++){
+        for(let i=0;i<this.table.length ;i++){
             if(this.table[i]){
                 console.log(i,this.table[i]);
             }
@@ -43,4 +43,4 @@ let hash = new Hashtable(5)
 hash.set("name","samad")
 hash.set("mane","samad1")
 hash.set("name","samad2")
-console.log(hash.display());
+hash.display()
