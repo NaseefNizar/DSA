@@ -77,7 +77,7 @@ class Graph {
         visited.add(currVertex);
         console.log(currVertex);
         for (const adjacentVertex of this.adjacencyList[currVertex]) {
-          stack.push(adjacentVertex);87
+          stack.push(adjacentVertex);
           
         }
       }
@@ -124,8 +124,8 @@ graph.addEdge("B", "A");
 graph.display();
 // graph.dfsIterative("E")
 
-graph.bfs("A");
+// graph.bfs("A");
 
-console.log(graph.findVerticesWithNoEdges());
+// console.log(graph.findVerticesWithNoEdges());
 
 // graph.bfs("E")

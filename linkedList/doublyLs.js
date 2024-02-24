@@ -66,9 +66,6 @@ class LinkedList{
 }
 
 
-
-
-
 const list = new LinkedList()
 console.log( list.isEmpty())
 list.append(10)

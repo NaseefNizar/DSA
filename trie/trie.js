@@ -98,29 +98,25 @@ class Trie {
     }
   }
 
-  getAllWordsWithPrefix(prefix) {
-    let current = this.root;
-    for (const char of prefix) {
-      if (!current.children[char]) {
-        return [];
-      }
-      current = current.children[char];
-    }
+  //alternate display method
+  getAllWords(node = this.root, prefix = "") {
     const words = [];
-    this.traverse(current, prefix, words);
-    // console.log(words);
+    this.helper(node, prefix,words);
     return words;
   }
 
-  traverse(node, prefix, words) {
+  helper(node, prefix,words) {
     if (node.endOfWord) {
       words.push(prefix);
     }
     for (const char in node.children) {
-      this.traverse(node.children[char], prefix + char, words);
+      this.helper(node.children[char], prefix + char,words);
     }
   }
 }
+
+
+
 
 const trie = new Trie();
 trie.insert("n");
@@ -128,10 +124,13 @@ trie.insert("name");
 trie.insert("nade");
 trie.insert("no");
 trie.insert("kid");
-trie.delete("kid");
-console.log(trie.search("kid"));
+trie.insert("kidding");
+(trie.delete("kid0"))
+// console.log(trie.search("kid"));
 
-trie.display();
+// trie.display();
 
-const words = trie.getAllWordsWithPrefix("k");
-console.log(words);
+console.log(trie.getAllWords());
+
+// const words = trie.getAllWordsWithPrefix("n");
+// console.log(words);

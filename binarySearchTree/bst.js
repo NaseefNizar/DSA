@@ -15,7 +15,7 @@ class BinarySearchTree {
     return this.root === null;
   }
 
-  insert(value) {                                    //best and average case complexity - O(logn) & worst case - O(n) when tree is skewed into a LS
+  insert(value) { //best and average case complexity - O(logn) & worst case - O(n) when tree is skewed into a LS
     const node = new Node(value);
     if (this.isEmpty()) {
       this.root = node;
@@ -40,7 +40,7 @@ class BinarySearchTree {
     }
   }
 
-  search(root, value) {                                 //
+  search(root = this.root, value) {                                 
     if (!root) {
       return false;
     } else {
@@ -79,6 +79,7 @@ class BinarySearchTree {
     }
   }
 
+  
   //bfs
   levelOrder() {
     const queue = [];
@@ -172,6 +173,7 @@ bst.insert(2);
 bst.insert(7);
 // console.log("Empty tree", bst.isEmpty());
 // bst.delete(10)
-bst.inOrder(bst.root);
-
+// bst.inOrder(bst.root);
+bst.levelOrder();
 // bst.primeNumber(bst.root)
+console.log( bst.search(1))

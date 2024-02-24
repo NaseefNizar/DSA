@@ -21,6 +21,7 @@ class HashTable {
       this.table[index] = [[key, value]];
     } else {
       const sameKeyItem = bucket.find((item) => item[0] === key);
+      // console.log("ss",sameKeyItem);
       if (sameKeyItem) {
         sameKeyItem[1] = value;
       } else {
@@ -64,8 +65,8 @@ const hashTable = new HashTable(50);
 
 hashTable.set("name", "naseef");
 // hashTable.display();
-hashTable.set("name", "sankar");
 hashTable.set("naem", "sankar");
+hashTable.set("name", "sankar");
 console.log(hashTable.get("name"));
 // hashTable.remove("name")
 hashTable.display();

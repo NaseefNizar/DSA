@@ -12,9 +12,10 @@ function search(arr, target) {
       rightIndex = middleIndex - 1;
     }
   }
+  return -1
 }
 
-console.log(search([1, 2, 3, 4, 5], 3));
+console.log(search([1, 2, 3, 4, 5], 6));
 
 //binary search with recursion
 function recSearch(arr, target, leftIndex = 0, rightIndex = arr.length - 1) {
@@ -34,7 +35,7 @@ function recSearch(arr, target, leftIndex = 0, rightIndex = arr.length - 1) {
   }
 }
 
-console.log(recSearch([1, 2, 3, 4, 5], 0));
+// console.log(recSearch([1, 2, 3, 4, 5], 0));
 
 //Array needs to be sorted
 //average and worst cast time complexity - O(NlogN)

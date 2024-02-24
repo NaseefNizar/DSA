@@ -65,14 +65,17 @@ class maxHeap {
         if(index === -1){
             return undefined
         }
-        const lastValue = this.heap.pop()
         if(index === this.heap.length-1){
             return value
         }
+        const lastValue = this.heap.pop()
         this.heap[index] = lastValue
         if (this.hasParent(index) && this.parent(index) < this.heap[index]) {
+        console.log('heapifyup');
             this.heapifyUp(index);
           } else {
+        console.log('heapifydown');
+
             this.heapifyDown(index);
           }
         return value
@@ -151,21 +154,21 @@ class maxHeap {
       return arr;
       }
 
-    print() {
-        let i = 0;
-        while (!this.isLeaf(i)) {
-            console.log("PARENT:", this.heap[i]);
-            console.log("LEFT CHILD:", this.leftChild(i));
-            console.log("RIGHT CHILD:", this.rightChild(i));
-            i++;
-        }      
-    }
-
-    // print(){
-    //     for(let i=0;i<this.heap.length;i++){
-    //         console.log(this.heap[i]);
-    //     }
+    // print() {
+    //     let i = 0;
+    //     while (!this.isLeaf(i)) {
+    //         console.log("PARENT:", this.heap[i]);
+    //         console.log("LEFT CHILD:", this.leftChild(i));
+    //         console.log("RIGHT CHILD:", this.rightChild(i));
+    //         i++;
+    //     }      
     // }
+
+    print(){
+        for(let i=0;i<this.heap.length;i++){
+            console.log(this.heap[i]);
+        }
+    }
 }
 
 
@@ -182,6 +185,8 @@ heap.add(45)
 heap.add(2)
 heap.add(1)
 // heap.add(45)
+
+heap.delete(7)
 
 heap.print()
 

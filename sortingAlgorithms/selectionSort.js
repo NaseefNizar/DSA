@@ -13,7 +13,6 @@ for(let i=0;i<a.length-1;i++){
         temp = a[i]
         a[i] = a[min]
         a[min] = temp
-    // }
 }
 
 
